@@ -1,0 +1,12 @@
+{
+	"Name": "Pman",
+	"Age": 28,
+	"Contact": "55258855",
+	"Company": "dd",
+	"Address": {
+		"City": "Tehran",
+		"State": "Marzdaran",
+		"Country": "Iran",
+		"Pincode": 88855888
+	}
+}

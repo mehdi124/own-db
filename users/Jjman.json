@@ -1,0 +1,12 @@
+{
+	"Name": "Jjman",
+	"Age": 25,
+	"Contact": "28888888885",
+	"Company": "tps",
+	"Address": {
+		"City": "Rasht",
+		"State": "shahrdari",
+		"Country": "Iran",
+		"Pincode": 122336558
+	}
+}

@@ -1,0 +1,12 @@
+{
+	"Name": "Asman",
+	"Age": 89,
+	"Contact": "233333885",
+	"Company": "eeeee",
+	"Address": {
+		"City": "Tehran",
+		"State": "kavir",
+		"Country": "Iran",
+		"Pincode": 125896558
+	}
+}

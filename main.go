@@ -70,7 +70,7 @@ func (d *Driver) Write(collection, resource string, v interface{}) error {
 	}
 
 	if resource == "" {
-		return fmt.Errorf("missing resource - unable to savve records (no name)")
+		return fmt.Errorf("missing resource - unable to save records (no name)")
 	}
 
 	mutex := d.getOrCreateMutext(collection)
@@ -86,9 +86,11 @@ func (d *Driver) Write(collection, resource string, v interface{}) error {
 	}
 
 	b, err := json.MarshalIndent(v, "", "\t")
+	fmt.Println(b)
 	if err != nil {
 		return err
 	}
+
 	b = append(b, byte('\n'))
 
 	if err := ioutil.WriteFile(tempPath, b, 0644); err != nil {
@@ -229,14 +231,15 @@ func main() {
 	}
 
 	employees := []User{
-		//{"John", "23", "2355448885", "test", Address{"Tehran", "Pardis", "Iran", "125896558"}},
-		{"JJ", "25", "28888888885", "tps", Address{"Rasht", "shahrdari", "Iran", "12233d6558"}},
-		{"PP", "28", "55258855", "dd", Address{"Tehran", "Marzdaran", "Iran", "88855s8d88d"}},
-		{"As", "89", "233333885", "eeeee", Address{"Tehran", "kavir", "Iran", "12sss5896558"}},
+		{"John", "23", "2355448885", "test", Address{"Tehran", "Pardis", "Iran", "125896558"}},
+		{"Jjman", "25", "28888888885", "tps", Address{"Rasht", "shahrdari", "Iran", "122336558"}},
+		{"Pman", "28", "55258855", "dd", Address{"Tehran", "Marzdaran", "Iran", "88855888"}},
+		{"Asman", "89", "233333885", "eeeee", Address{"Tehran", "kavir", "Iran", "125896558"}},
 	}
 
 	for _, value := range employees {
 
+		fmt.Println(value, value.Name)
 		db.Write("users", value.Name, value)
 
 	}
@@ -262,7 +265,7 @@ func main() {
 
 	fmt.Println(allusers)
 
-	//if err := db.Delete("users", "John"); err != nil {
+	//if err := db.Delete("users", ""); err != nil {
 	//fmt.Println("delete error", err)
 	//}
 
