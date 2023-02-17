@@ -1,0 +1,12 @@
+{
+	"Name": "John",
+	"Age": 23,
+	"Contact": "2355448885",
+	"Company": "test",
+	"Address": {
+		"City": "Tehran",
+		"State": "Pardis",
+		"Country": "Iran",
+		"Pincode": 125896558
+	}
+}
